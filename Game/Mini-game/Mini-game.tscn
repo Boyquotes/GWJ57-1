@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Mini-game/Sapper.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Mini-game/Mini-game.gd" type="Script" id=2]
+
+[node name="Mini-game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Sapper" parent="." instance=ExtResource( 1 )]
+
+[node name="X" type="LineEdit" parent="."]
+margin_left = 862.0
+margin_top = 122.0
+margin_right = 920.0
+margin_bottom = 146.0
+
+[node name="Label" type="Label" parent="X"]
+margin_top = -23.0
+margin_right = 40.0
+margin_bottom = -9.0
+text = "X"
+
+[node name="Y" type="LineEdit" parent="."]
+margin_left = 861.0
+margin_top = 222.0
+margin_right = 919.0
+margin_bottom = 246.0
+
+[node name="Label" type="Label" parent="Y"]
+margin_top = -23.0
+margin_right = 40.0
+margin_bottom = -9.0
+text = "Y"
+
+[node name="Bombs" type="LineEdit" parent="."]
+margin_left = 861.0
+margin_top = 327.0
+margin_right = 919.0
+margin_bottom = 351.0
+
+[node name="Label" type="Label" parent="Bombs"]
+margin_top = -23.0
+margin_right = 40.0
+margin_bottom = -9.0
+text = "Bombs"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 840.0
+margin_top = 50.0
+margin_right = 933.0
+margin_bottom = 70.0
+text = "NEW GAME"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
